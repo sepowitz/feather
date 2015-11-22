@@ -18,6 +18,9 @@
 
 .site-footer {
 	padding: 15px;
+	background: #f9f9f9;
+	color: #ececec;
+	margin: 0;
 }
 
 .site-footer {
@@ -25,6 +28,7 @@
 		float: right;
 		li {
 			display: inline-block;
+			margin-left: 10px;
 		}
 	}
 }
@@ -34,6 +38,7 @@
 .search-bar {
 	width: 100%;
 	text-align: center;
+	padding-top: 10%;
 }
 
 input[type=text] {
@@ -45,8 +50,19 @@ input[type=text] {
 
 input[type=submit] {
 	background: lightblue;
+	color: #fff;
 	height: 40px;
 	width: 60px;
 	border-radius: 2px;
 
+}
+
+/*-- Forecast Section --*/
+
+.forecast-container {
+	width: 100%;
+	text-align: center;
+	h2, p {
+		color: white;
+	}
 }

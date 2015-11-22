@@ -41,17 +41,22 @@ h1 {
   height: 60px; }
 
 .site-footer {
-  padding: 15px; }
+  padding: 15px;
+  background: #f9f9f9;
+  color: #ececec;
+  margin: 0; }
 
 .site-footer ul {
   float: right; }
   .site-footer ul li {
-    display: inline-block; }
+    display: inline-block;
+    margin-left: 10px; }
 
 /*-- Search Bar --*/
 .search-bar {
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  padding-top: 10%; }
 
 input[type=text] {
   border: solid 1px lightgray;
@@ -61,6 +66,14 @@ input[type=text] {
 
 input[type=submit] {
   background: lightblue;
+  color: #fff;
   height: 40px;
   width: 60px;
   border-radius: 2px; }
+
+/*-- Forecast Section --*/
+.forecast-container {
+  width: 100%;
+  text-align: center; }
+  .forecast-container h2, .forecast-container p {
+    color: white; }
