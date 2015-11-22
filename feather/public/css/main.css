@@ -42,15 +42,19 @@ h1 {
 
 .site-footer {
   padding: 15px;
-  background: #f9f9f9;
-  color: #ececec;
   margin: 0; }
+
+.site-footer h1 {
+  color: #00abff;
+  opacity: .5; }
 
 .site-footer ul {
   float: right; }
   .site-footer ul li {
     display: inline-block;
-    margin-left: 10px; }
+    margin-left: 10px;
+    color: #00abff;
+    opacity: .3; }
 
 /*-- Search Bar --*/
 .search-bar {
@@ -65,7 +69,8 @@ input[type=text] {
   padding: 2px; }
 
 input[type=submit] {
-  background: lightblue;
+  background: #00abff;
+  opacity: .5;
   color: #fff;
   height: 40px;
   width: 60px;
@@ -74,6 +79,11 @@ input[type=submit] {
 /*-- Forecast Section --*/
 .forecast-container {
   width: 100%;
-  text-align: center; }
-  .forecast-container h2, .forecast-container p {
-    color: white; }
+  text-align: center;
+  color: white;
+  padding-top: 10%;
+  font-family: 'Merriweather'; }
+  .forecast-container h2 {
+    font-size: 5em; }
+  .forecast-container p {
+    font-size: 2em; }

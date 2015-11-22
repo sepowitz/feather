@@ -19,14 +19,14 @@
 <body ng-controller="WeatherCtrl as weather">
 	<main class='page-wrap'>
 		<div class='search-bar'>
-			<form>
-				<input type="text">
+			<form ng-submit="weather.searchZip(weather.ZIP)">
+				<input type="text" ng-model="weather.ZIP">
 				<input type="submit" value="forecast">
 			</form>
 		</div>
 		<div class='forecast-container'>
-			<h2>56 &deg;</h2>
-			<p>cloudy</p>
+			<p>{{weather.description}}</p>
+			<h2>{{weather.temp}} <span>&deg;</span></h2>
 
 		</div>
 	</main>
