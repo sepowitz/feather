@@ -1,1 +1,52 @@
-@import 'base'
+@import 'base';
+
+/*-- Sticky Footer --*/
+
+.page-wrap {
+	min-height: 100%;
+	margin-bottom: -60px;
+}
+
+.page-wrap:after {
+	content: "";
+	display: block;
+}
+
+.site-footer, .page-wrap:after {
+	height: 60px;
+}
+
+.site-footer {
+	padding: 15px;
+}
+
+.site-footer {
+	ul {
+		float: right;
+		li {
+			display: inline-block;
+		}
+	}
+}
+
+/*-- Search Bar --*/
+
+.search-bar {
+	width: 100%;
+	text-align: center;
+}
+
+input[type=text] {
+	border: solid 1px lightgray;
+	width: 20%;
+	height: 40px;
+	padding: 2px;
+}
+
+input[type=submit] {
+	background: lightblue;
+	height: 40px;
+	width: 60px;
+	border-radius: 2px;
+
+}

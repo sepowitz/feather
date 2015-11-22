@@ -10,9 +10,12 @@ for the feather app.
   border: 0;
   box-sizing: border-box; }
 
+html, body {
+  height: 100%; }
+
 /************************** 
 
-FONT COLOR
+FONT STYLES
 
 ***************************/
 /************************** 
@@ -21,20 +24,43 @@ FONT SIZE
 
 ***************************/
 h1 {
-  font-size: 2rem;
+  font-family: "Merriweather";
+  font-size: 1rem;
   color: #000; }
 
-h2 {
-  font-size: 4rem; }
+/*-- Sticky Footer --*/
+.page-wrap {
+  min-height: 100%;
+  margin-bottom: -60px; }
 
-h3 {
-  font-size: 3rem; }
+.page-wrap:after {
+  content: "";
+  display: block; }
 
-h4 {
-  font-size: 2rem; }
+.site-footer, .page-wrap:after {
+  height: 60px; }
 
-h5 {
-  font-size: 1rem; }
+.site-footer {
+  padding: 15px; }
 
-h6 {
-  font-size: .5rem; }
+.site-footer ul {
+  float: right; }
+  .site-footer ul li {
+    display: inline-block; }
+
+/*-- Search Bar --*/
+.search-bar {
+  width: 100%;
+  text-align: center; }
+
+input[type=text] {
+  border: solid 1px lightgray;
+  width: 20%;
+  height: 40px;
+  padding: 2px; }
+
+input[type=submit] {
+  background: lightblue;
+  height: 40px;
+  width: 60px;
+  border-radius: 2px; }

@@ -13,17 +13,21 @@ for the feather app.
 	box-sizing: border-box;
 }
 
+html, body {
+	height: 100%;
+}
+
 /************************** 
 
-FONT COLOR
+FONT STYLES
 
 ***************************/
 
 
-$primary-color: #000;
-$secondary-color: #fff;
-$accent-color: #g5gffg;
+$primary: #000;
+$secondary: #fff;
 
+$merri: 'Merriweather';
 
 
 
@@ -36,30 +40,10 @@ FONT SIZE
 
 
 h1 {
-
-	font-size: 2rem;
-	color: $primary-color;
-}
-
-h2 {
-	
-	font-size: 4rem;
-}
-
-h3 {
-	font-size: 3rem;
-}
-
-h4 {
-	font-size: 2rem;
-}
-
-h5 {
+	font-family: $merri;
 	font-size: 1rem;
+	color: $primary;
 }
 
-h6 {
-	font-size: .5rem;
-}
 
 

@@ -1,17 +1,4 @@
-var app = angular.module('FeatherApp', ['ngRoute', 'ngAnimate']);
-
-app.config(function($routeProvider){
-	$routeProvider.when('/', 
-		{
-			templateUrl: 	'partials/forecast.html',
-			controller: 	'WeatherCtrl',
-			controllerAs: 'weather'
-		})
-	});
-
-
-
-
+var app = angular.module('FeatherApp', ['ngAnimate']);
 
 app.controller('WeatherCtrl', function(){
 	var self = this;
