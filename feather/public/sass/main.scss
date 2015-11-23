@@ -23,16 +23,14 @@
 
 .site-footer {
 	h1 {
-		color: #00abff;
-		opacity: .5;
+		color: #ececec;
 	}
 	ul {
 		float: right;
 		li {
 			display: inline-block;
 			margin-left: 10px;
-			color: #00abff;
-			opacity: .3;
+			color: #ececec;
 		}
 	}
 }
@@ -49,16 +47,15 @@ input[type=text] {
 	border: solid 1px lightgray;
 	width: 20%;
 	height: 40px;
-	padding: 2px;
+	padding: 10px;
 	font-family: 'Merriweather';
 }
 
 input[type=submit] {
 	background: #00abff;
-	opacity: .5;
 	color: #fff;
 	height: 40px;
-	width: 60px;
+	width: 80px;
 	border-radius: 2px;
 
 }
@@ -71,6 +68,7 @@ input[type=submit] {
 	color: white;
 	padding-top: 10%;
 	font-family: 'Merriweather';
+	transition: 2s;
 	h2 {
 		font-size: 5em;
 	}
@@ -79,11 +77,19 @@ input[type=submit] {
 	}
 }
 
+.forecast-container.ng-hide {
+		opacity: 0;
+	}
+	.forecast-container.ng-hide-remove, .ng-hide-add {
+		transition: all ease 1000ms;
+	}
+
 .error-container {
 	width: 100%;
 	text-align: center;
 	padding-top: 10%;
 	font-family: 'Merriweather';
+	transition: 2s;
 	h4 {
 		color: red;
 	}
@@ -98,9 +104,9 @@ input[type=submit] {
 		animation: float 2s infinite;
 		}
 		@keyframes float {
-			0% 		{transform: rotateZ(-20deg);}
-			50%		{transform: rotateZ(40deg);}
-			100% 	{transform: rotateZ(-20deg);}
+			0% 		{transform: rotateZ(-20deg) translate(50px);}
+			50%		{transform: rotateZ(40deg) translate(-50px);}
+			100% 	{transform: rotateZ(-20deg) translate(50px);}
 		}
 	}
 

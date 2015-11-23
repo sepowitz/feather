@@ -15,7 +15,6 @@ server.use(express.static('./public'));
 
 //Get data by ZIPCODE
 server.get('/:zip', function(req, res){
-	console.log(req.params.zip)
 	var ZIP = req.params.zip;
 	http.get('http://api.openweathermap.org/data/2.5/weather?zip=' + ZIP + ',us&units=imperial&APPID=' + process.env.OW_API, function(data){
 		data.on('data', function(data){

@@ -2,6 +2,10 @@ var app = angular.module('FeatherApp', ['ngAnimate']);
 
 app.controller('WeatherCtrl', ['$http', function($http){
 	var self = this;
+			self.loading = true;
+			self.loadAnim = function(param){
+				self.loading = param;
+			};
 
 	self.searchZip = function(ZIP){
 		$http.get('/' + ZIP).success(function(data){
@@ -26,11 +30,13 @@ app.controller('WeatherCtrl', ['$http', function($http){
 				}
 				self.description = weather.weather[0].description;
 				self.temp = Math.round(weather.main.temp);
+				self.city = weather.name;
 			} else {
 				if(self.temp) {
 					document.querySelector('.page-wrap').style.backgroundColor = ""
 					self.temp = null;
 					self.description = null;
+					self.city= null;
 				}
 				self.error = "Sorry, we could not find what you were looking for. Try again."
 			}

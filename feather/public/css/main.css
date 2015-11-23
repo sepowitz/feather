@@ -45,16 +45,14 @@ h1 {
   margin: 0; }
 
 .site-footer h1 {
-  color: #00abff;
-  opacity: .5; }
+  color: #ececec; }
 
 .site-footer ul {
   float: right; }
   .site-footer ul li {
     display: inline-block;
     margin-left: 10px;
-    color: #00abff;
-    opacity: .3; }
+    color: #ececec; }
 
 /*-- Search Bar --*/
 .search-bar {
@@ -66,15 +64,14 @@ input[type=text] {
   border: solid 1px lightgray;
   width: 20%;
   height: 40px;
-  padding: 2px;
+  padding: 10px;
   font-family: 'Merriweather'; }
 
 input[type=submit] {
   background: #00abff;
-  opacity: .5;
   color: #fff;
   height: 40px;
-  width: 60px;
+  width: 80px;
   border-radius: 2px; }
 
 /*-- Forecast Section --*/
@@ -83,17 +80,25 @@ input[type=submit] {
   text-align: center;
   color: white;
   padding-top: 10%;
-  font-family: 'Merriweather'; }
+  font-family: 'Merriweather';
+  transition: 2s; }
   .forecast-container h2 {
     font-size: 5em; }
   .forecast-container p {
     font-size: 2em; }
 
+.forecast-container.ng-hide {
+  opacity: 0; }
+
+.forecast-container.ng-hide-remove, .ng-hide-add {
+  transition: all ease 1000ms; }
+
 .error-container {
   width: 100%;
   text-align: center;
   padding-top: 10%;
-  font-family: 'Merriweather'; }
+  font-family: 'Merriweather';
+  transition: 2s; }
   .error-container h4 {
     color: red; }
 
@@ -107,8 +112,8 @@ input[type=submit] {
 
 @keyframes float {
   0% {
-    transform: rotateZ(-20deg); }
+    transform: rotateZ(-20deg) translate(50px); }
   50% {
-    transform: rotateZ(40deg); }
+    transform: rotateZ(40deg) translate(-50px); }
   100% {
-    transform: rotateZ(-20deg); } }
+    transform: rotateZ(-20deg) translate(50px); } }
