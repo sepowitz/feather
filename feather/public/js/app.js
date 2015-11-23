@@ -8,7 +8,9 @@ app.controller('WeatherCtrl', ['$http', function($http){
 			weather = data;
 			console.log(weather)
 			if(weather.cod == 200 ) {
-				$('.forecast-container').clear();
+				if(self.error){
+					self.error = '';
+				}
 				if(weather.main.temp < 0) {
 					document.querySelector('.page-wrap').style.backgroundColor = "#73A3FF"
 				} else if(weather.main.temp < 20){
@@ -25,10 +27,12 @@ app.controller('WeatherCtrl', ['$http', function($http){
 				self.description = weather.weather[0].description;
 				self.temp = Math.round(weather.main.temp);
 			} else {
-				var el = document.querySelector('.forecast-container'),
-						elNino = document.createElement('h1');
-						elNino.innerHTML = 'Sorry, we could not find what you were looking for. Try again.';
-						el.appendChild(elNino);
+				if(self.temp) {
+					document.querySelector('.page-wrap').style.backgroundColor = ""
+					self.temp = null;
+					self.description = null;
+				}
+				self.error = "Sorry, we could not find what you were looking for. Try again."
 			}
 	
 		})

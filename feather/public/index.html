@@ -20,14 +20,19 @@
 	<main class='page-wrap'>
 		<div class='search-bar'>
 			<form ng-submit="weather.searchZip(weather.ZIP)">
-				<input type="text" ng-model="weather.ZIP">
+				<input type="text" ng-model="weather.ZIP" placeholder="enter zipcode here">
 				<input type="submit" value="forecast">
 			</form>
 		</div>
-		<div class='forecast-container'>
+		<div ng-show="weather.description" class='forecast-container'>
 			<p class='weather-words'>{{weather.description}}</p>
 			<h2 class='weather-temp'>{{weather.temp}} <span>&deg;</span></h2>
-
+		</div>
+		<div ng-show="weather.error" class="error-container">
+			<h4 class="error-message">{{weather.error}}</h4>
+		</div>
+		<div ng-show="!weather.temp && !weather.error" class='loading'>
+			<img style="width: 50px;"src='assets/feather-icon.png'>
 		</div>
 	</main>
 	<footer class="site-footer">

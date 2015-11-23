@@ -50,6 +50,7 @@ input[type=text] {
 	width: 20%;
 	height: 40px;
 	padding: 2px;
+	font-family: 'Merriweather';
 }
 
 input[type=submit] {
@@ -77,3 +78,29 @@ input[type=submit] {
 		font-size: 2em;
 	}
 }
+
+.error-container {
+	width: 100%;
+	text-align: center;
+	padding-top: 10%;
+	font-family: 'Merriweather';
+	h4 {
+		color: red;
+	}
+}
+
+.loading {
+	width: 100%;
+	text-align: center;
+	padding-top: 10%;
+		img {
+		width: 100px;
+		animation: float 2s infinite;
+		}
+		@keyframes float {
+			0% 		{transform: rotateZ(-20deg);}
+			50%		{transform: rotateZ(40deg);}
+			100% 	{transform: rotateZ(-20deg);}
+		}
+	}
+
