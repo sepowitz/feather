@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
   <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,700,900' rel='stylesheet' type='text/css'>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="bower_components/angular-animate/angular-animate.min.js"></script>
   <script src="js/app.js"></script>
@@ -18,14 +19,14 @@
 
 <body ng-controller="WeatherCtrl as weather">
 	<main class='page-wrap'>
+		<div class="intro">
+			<p>feather is your personal, ligthweight weather psychic. Feel free to search for the local weather by zip code.</p>
+		</div>
 		<div class='search-bar'>
 			<form ng-submit="weather.searchZip(weather.ZIP)">
 				<input type="text" ng-model="weather.ZIP" placeholder="enter zip code here">
 				<input ng-click="weather.loadAnim(false) "type="submit" value="weather me">
 			</form>
-		</div>
-		<div ng-show=" weather.loading && !weather.temp && !weather.error" class='loading'>
-			<img style="width: 50px;" src='assets/feather-icon.png'>
 		</div>
 		<div ng-show="weather.description" class='forecast-container' ng-class="forecast">
 			<small class="weather-city">{{weather.city}}</small>
@@ -34,6 +35,9 @@
 		</div>
 		<div ng-show="weather.error" class="error-container">
 			<h4 class="error-message">{{weather.error}}</h4>
+		</div>
+		<div ng-show=" weather.loading && !weather.temp && !weather.error" class='load-icon'>
+			<img style="width: 50px;" src='assets/feather-icon.png'>
 		</div>
 	</main>
 	<footer class="site-footer">

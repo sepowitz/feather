@@ -24,6 +24,10 @@
 .site-footer {
 	h1 {
 		color: #ececec;
+		font-weight: lighter;
+		font-size: 1em;
+		font-family: $merri;
+
 	}
 	ul {
 		float: right;
@@ -34,6 +38,27 @@
 		}
 	}
 }
+
+/*-- Intro Section --*/
+
+.intro {
+	width: 100%;
+	text-align: center;
+	padding-top: 2em;
+	p {
+	display: block;
+	margin: 0 auto;
+	width: 50%;
+	font-size: 1em;
+	color: lightblue;
+	font-family: $merri;
+	font-weight: lighter;
+	font-spacing: .4em;
+	line-height: 2em;
+
+	}
+}
+
 
 /*-- Search Bar --*/
 
@@ -48,7 +73,7 @@ input[type=text] {
 	width: 20%;
 	height: 40px;
 	padding: 10px;
-	font-family: 'Merriweather';
+	font-family: $merri;
 }
 
 input[type=submit] {
@@ -67,10 +92,10 @@ input[type=submit] {
 	text-align: center;
 	color: white;
 	padding-top: 10%;
-	font-family: 'Merriweather';
+	font-family: $merri;
 	transition: 2s;
 	h2 {
-		font-size: 5em;
+		font-size: 8em;
 	}
 	p {
 		font-size: 2em;
@@ -88,7 +113,7 @@ input[type=submit] {
 	width: 100%;
 	text-align: center;
 	padding-top: 10%;
-	font-family: 'Merriweather';
+	font-family: $merri;
 	transition: 2s;
 	h4 {
 		color: red;
