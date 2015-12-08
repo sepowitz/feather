@@ -29,5 +29,4 @@ server.get('/:zip', function(req, res){
 //Establish server connection
 server.listen(3000, function(){
 	console.log('listening on port 3000')
-	console.log(process.env.OW_API);
 });

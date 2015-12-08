@@ -14,11 +14,11 @@ var sass = require('gulp-sass');
 // });
 
 gulp.task('styles', function(){
-	gulp.src('feather/public/sass/**/*.scss')
+	gulp.src('public/sass/**/*.scss')
 		.pipe(sass().on('error', sass.logError))
-		.pipe(gulp.dest('./feather/public/css/'));
+		.pipe(gulp.dest('./public/css/'));
 });
 
 gulp.task('default', function(){
-	gulp.watch('feather/public/sass/**/*.scss', ['styles']);
+	gulp.watch('public/sass/**/*.scss', ['styles']);
 });
