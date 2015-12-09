@@ -2,6 +2,7 @@ var express 		= require('express'),
 		dotenv 			= require('dotenv'),
 		bodyParser 	= require('body-parser'),
 		http				= require('http'),
+		PORT        = process.env.PORT || 3000,
 		server  		= express();
 
 
@@ -27,6 +28,6 @@ server.get('/:zip', function(req, res){
 
 
 //Establish server connection
-server.listen(3000, function(){
-	console.log('listening on port 3000')
+server.listen(PORT, function(){
+	console.log('listening on port ' + PORT)
 });
